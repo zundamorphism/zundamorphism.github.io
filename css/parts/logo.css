@@ -94,17 +94,5 @@ header {
     }
 }
 
-/*
-#sub_text {
-    color: var(--front-color);
-    position: absolute;
-    inline-size: 100%;
-    inset: 100px auto auto auto;
-    text-align: center;
 
-    -webkit-user-select: none;
-    
-    opacity: 0;
-    animation: float_down 0.7s ease 0.5s forwards;
-}
-*/
+/* Copyright (c) 2026 Zundamorphism ver.1.0 beta */
