@@ -1,0 +1,64 @@
+/* ===== IMPORT CSS ===== */
+
+@import url("../parts/root.css");
+@import url("../parts/logo.css");
+@import url("../parts/copyright.css");
+@import url("../parts/font.css");
+@import url("../parts/ver.css");
+
+
+/* ===== MAIN PROPERTY ===== */
+
+/* <<< important >>> */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+main {
+    margin-top: 0;
+    inline-size: 90%;
+    margin-inline: auto;
+}
+
+a {
+    display: block;
+    
+    text-decoration: none;
+    cursor: default;
+}
+
+p {
+    color: var(--fg-color);
+    font: 17px var(--mono-font);
+    text-indent: 0;
+    
+    &::selection {
+        color: var(--bg-color);
+        background: var(--accent-color);
+    }
+}
+
+
+/* <<< design >>> */
+
+.welcome {
+    display: block;
+    inline-size: 50%;
+    margin-inline: auto;
+}
+
+
+
+
+
+
+@media screen and (width <= 700px) {
+    main {
+        width: 100%;
+    }
+}
