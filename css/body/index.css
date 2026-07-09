@@ -248,10 +248,3 @@ p {
 .marker {
     font: clamp(56.25px, 4.5vw, 113.5px) var(--main-sans-serif-en);
 }
-
-
-/*@media screen and (width <= 700px) {*/
-/*    main {*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
