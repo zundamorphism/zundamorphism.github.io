@@ -1,0 +1,16 @@
+/* ===== IMPORT CSS ===== */
+
+@import url("root.css");
+@import url("font.css");
+
+
+/* ===== MAIN PROPERTY ===== */
+
+#version {
+    margin-block: 40px;
+    
+    color: var(--gray-dark);
+    font: 17px var(--mono-font);
+    text-align: center;
+    text-indent: 0;
+}
