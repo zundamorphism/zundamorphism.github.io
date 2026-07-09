@@ -1,0 +1,87 @@
+/* ===== IMPORT CSS ===== */
+
+@import url("root.css");
+@import url("font.css");
+
+
+/* ===== MAIN PROPERTY ===== */
+
+/* <<< size >>> */
+
+footer {
+    block-size: 100px;
+    margin: 200px auto 100px auto;
+}
+
+/* <<< design >>> */
+
+#copyright {
+    opacity: 0;
+    
+    animation: jump_in 1s ease 0.6s forwards;
+    
+    & a {
+        display: block;
+        inline-size: min(80%, 600px);
+        margin-inline: auto;
+        padding: 15px;
+        
+        color: var(--fg-color);
+        background: var(--bg-color);
+        font-family: "Roboto";
+        text-align: center;
+        line-height: 1.5;
+        border-radius: 7px;
+        
+        transition: var(--smth-out) 1s;
+        translate: 0 0;
+        
+        -webkit-user-select: none;
+        
+        &:link {
+            color: var(--fg-color);
+        }
+        &:visited {
+            color: var(--fg-color);
+        }
+        &:hover {
+            color: var(--accent-color);
+            
+            transition: var(--smth-out) 1s;
+            translate: 0 -3px;
+            
+            box-shadow: 7px 7px 15px 0 rgb(0 0 0 / 0.1);
+        }
+        &:active {
+            color: var(--accent-color);
+            background: var(--bg-color);
+        }
+    }
+}
+
+@keyframes jump_in {
+    0% {
+        opacity: 0;
+        translate: 0 50vh;
+    }
+    33% {
+        opacity: 1;
+        translate: 0 -5vh;
+    }
+    67% {
+        opacity: 1;
+        translate: 0 0.5vh;
+    }
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+/*
+@container (width <= 600px) {
+    footer #copyright a {
+        font: 500 14px "Roboto";
+    }
+}
+*/
