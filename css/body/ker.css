@@ -173,23 +173,4 @@ p {
 }
 
 
-/*
-.parent {
-    container-type:inline-size;
-}
-
-@container (width < 500px) {
-.child {
-    background-color: red;
-}
-
-}
-@media screen and (width <= 700px) {
-    main {
-        inline-size: 100%;
-    }
-}
-*/
-
-
-/* Zundamorphism 2026 ver.6.0 beta */
+/* Copyright (c) 2026 Zundamorphism ver.1.0 beta */
