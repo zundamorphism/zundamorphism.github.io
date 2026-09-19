@@ -118,136 +118,109 @@ p {
 
 /* <<< design >>> */
 
-.container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin: clamp(250px, 20vw, 500px) auto auto auto;
+#ker_text {
+    margin-top: 35pt;
+    color: white;
+    pointer-events: none;
 }
 
-.card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    block-size: clamp(150px, 12vw, 300px);
-    inline-size: clamp(300px, 24vw, 600px);
-    margin: 200px auto auto auto;
-    position: absolute;
-    inset: 0;
-    border-radius: clamp(18.75px, 1.5vw, 37.5px);
+#yt_text {
+    margin: 81pt auto auto -130pt;
+    color: white;
+    pointer-events: none;
+}
+
+#note_text {
+    margin: 125pt auto auto -225pt;
+    color: white;
+    pointer-events: none;
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    margin: 400pt auto auto auto;
+    width: 100%;
+    opacity: 0;
     
+    animation: fade_in 1s ease 1.5s forwards;
+}
+
+
+#ccl_ker {
+    grid-area: 1 / 1;
+        
+    border-radius: 50%;
     color: var(--fg-color);
     background: white;
     box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
     
+    inline-size: 120px;
+    block-size: 120px;
+    
     -webkit-user-select: none;
-}
-
-#card_y {
-    transition: var(--smth-out) 1s;
-    scale: 1;
+    user-select: none;
     
-    &::before{
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: clamp(18.75px, 1.5vw, 37.5px);
-            background: linear-gradient(135deg, #FF7755, #FF0000);
-            box-shadow: 0 0 150px rgba(255, 50, 50, 1);
-            opacity: 0;
-            transition: opacity 1s var(--smth-out);
-            z-index: -1;
-        }
+    transition: var(--smth-out) 2s;
     
     &:hover{
-        transition: var(--smth-out) 1s;
-        scale: 0.95;
-        
-        &::before{
-            opacity: 1;
-        }
+        transition: var(--smth-out) 2s;
+        background: var(--accent-color);
     }
 }
 
-#card_k {
-    position:absolute;
-    left: clamp(375px, 30vw, 750px);
+#ccl_yt {
+    grid-area: 1 / 1;
+        
+    border-radius: 50%;
+    color: var(--fg-color);
+    background: white;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
     
-    transition: var(--smth-out) 1s;
-    scale: 0.93;
+    inline-size: 240px;
+    block-size: 240px;
     
-    &::before{
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: clamp(18.75px, 1.5vw, 37.5px);
-            background: linear-gradient(135deg, var(--accent-color-bg), var(--accent-color));
-            box-shadow: 0 0 150px rgba(80, 255, 130, 1);
-            opacity: 0;
-            transition: opacity 1s var(--smth-out);
-            z-index: -1;
-        }
+    -webkit-user-select: none;
+    user-select: none;
+
+    transition: var(--smth-out) 2s;
     
     &:hover{
-        transition: var(--smth-out) 1s;
-        left: clamp(500px, 40vw, 1000px);
-        scale: 0.8835;
-        
-        &::before{
-            transition: var(--smth-out) 1s;
-            opacity: 1;
-        }
+        transition: var(--smth-out) 2s;
+        background: var(--accent-color);
     }
 }
 
-#card_a {
-    position:absolute;
-    right: clamp(375px, 30vw, 750px);
+#ccl_note {
+    grid-area: 1 / 1;
+        
+    border-radius: 50%;
+    color: var(--fg-color);
+    background: white;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
     
-    transition: var(--smth-out) 1s;
-    scale: 0.93;
+    inline-size: 360px;
+    block-size: 360px;
     
-    &::before{
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: clamp(18.75px, 1.5vw, 37.5px);
-            background: linear-gradient(135deg, #66CCFF, #6666FF);
-            box-shadow: 0 0 150px rgba(70, 120, 255, 1);
-            opacity: 0;
-            transition: opacity 1s var(--smth-out);
-            z-index: -1;
-        }
+    -webkit-user-select: none;
+    user-select: none;
+    
+    transition: var(--smth-out) 2s;
     
     &:hover{
-        transition: var(--smth-out) 1s;
-        right: clamp(500px, 40vw, 1000px);
-        scale: 0.8835;
-        
-        &::before{
-            opacity: 1;
-        }
+        transition: var(--smth-out) 2s;
+        background: var(--accent-color);
     }
 }
 
-#card_ani_y {
-    opacity: 0;
-    animation: scale_down 2s var(--smth-out) 1.8s forwards;
-}
 
-#card_ani_k {
-    opacity: 0;
-    animation: float_right 2s var(--smth-out) 1.9s forwards;
-}
-
-#card_ani_a {
-    opacity: 0;
-    animation: float_left 2s var(--smth-out) 1.9s forwards;
-}
-
-.marker {
-    font: clamp(56.25px, 4.5vw, 113.5px) var(--main-sans-serif-en);
-}
-
-
-/* Copyright (c) 2026 Zundamorphism ver.1.0 beta */
+/* Copyright (c) 2026 Zundamorphism ver.2.0 beta 2 */
