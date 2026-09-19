@@ -21,7 +21,7 @@ body {
 
 main {
     margin-top: 0;
-    inline-size: 90%;
+    inline-size: 95%;
     margin-inline: auto;
 }
 
@@ -48,13 +48,9 @@ p {
 
 .welcome {
     display: block;
-    inline-size: 50%;
+    inline-size: min(450pt, 70%);
     margin-inline: auto;
 }
-
-
-
-
 
 
 @media screen and (width <= 700px) {
@@ -64,4 +60,4 @@ p {
 }
 
 
-/* Copyright (c) 2026 Zundamorphism ver.1.0 beta */
+/* Copyright (c) 2026 Zundamorphism ver.2.0 beta 1 */
